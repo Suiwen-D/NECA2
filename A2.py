@@ -204,6 +204,164 @@ class JobShopGA:
         else:
             raise ValueError(f"Unknown crossover method: {self.crossover_method}")
 
+    def swap_mutation(self, chromosome: List[int]) -> List[int]:
+        """Swap mutation: Randomly swap two positions"""
+        if random.random() > self.mutation_rate:
+            return chromosome
+            
+        result = chromosome.copy()
+        idx1, idx2 = random.sample(range(len(chromosome)), 2)
+        result[idx1], result[idx2] = result[idx2], result[idx1]
+        return result
+    
+    def insert_mutation(self, chromosome: List[int]) -> List[int]:
+        """Insert mutation: Randomly select a gene and insert it at another random position"""
+        if random.random() > self.mutation_rate:
+            return chromosome
+            
+        result = chromosome.copy()
+        size = len(chromosome)
+        # Select two different positions
+        pos1, pos2 = random.sample(range(size), 2)
+        
+        # Get gene to insert
+        gene = result[pos1]
+        
+        # Remove gene from original position
+        result.pop(pos1)
+        
+        # Insert gene at new position
+        result.insert(pos2, gene)
+        
+        return result
+    
+    def reverse_mutation(self, chromosome: List[int]) -> List[int]:
+        """Reverse mutation: Randomly select a segment and reverse it"""
+        if random.random() > self.mutation_rate:
+            return chromosome
+            
+        result = chromosome.copy()
+        size = len(chromosome)
+        # Select two positions as reverse interval
+        pos1, pos2 = sorted(random.sample(range(size), 2))
+        
+        # Reverse genes in interval
+        result[pos1:pos2+1] = reversed(result[pos1:pos2+1])
+        
+        return result
+    
+    def mutation(self, chromosome: List[int]) -> List[int]:
+        """Perform mutation based on selected method"""
+        try:
+            if self.mutation_method == "swap":
+                return self.swap_mutation(chromosome)
+            elif self.mutation_method == "insert":
+                return self.insert_mutation(chromosome)
+            elif self.mutation_method == "reverse":
+                return self.reverse_mutation(chromosome)
+            else:
+                raise ValueError(f"Unknown mutation method: {self.mutation_method}")
+        except Exception as e:
+            print(f"Mutation error: {str(e)}")
+            return chromosome.copy()
+    
+    def calculate_improvement_rate(self, improvement_size: int = 10) -> float:
+        """Calculate average improvement rate over the last improvement_size generations"""
+        if len(self.best_fitness_history) < improvement_size:
+            return float('inf')
+            
+        recent_values = self.best_fitness_history[-improvement_size:]
+        if len(recent_values) < 2:
+            return 0.0
+            
+        improvements = [abs(recent_values[i] - recent_values[i-1]) 
+                       for i in range(1, len(recent_values))]
+        return sum(improvements) / len(improvements)
+
+    def is_system_stable(self) -> Tuple[bool, str]:
+        """Check if the system has stabilized"""
+        if len(self.best_fitness_history) < self.stability_threshold:
+            return False, "Insufficient generations, continue optimization"
+            
+        # Check if best solution has stagnated
+        recent_best = self.best_fitness_history[-self.stability_threshold:]
+        if len(set(recent_best)) == 1:
+            return True, f"Best solution hasn't improved for {self.stability_threshold} generations"
+            
+        # Check improvement rate
+        improvement_rate = self.calculate_improvement_rate()
+        if improvement_rate < 0.1:  # Improvement rate threshold
+            return True, f"Low improvement rate: {improvement_rate:.4f}"
+        
+        return False, "System still optimizing"
+
+    def run(self):
+        """Run genetic algorithm"""
+        print("\nInitializing population...")
+        population = [self.create_chromosome() for _ in range(self.population_size)]
+        best_solution = None
+        best_makespan = float('inf')
+        
+        print(f"\nUsing selection method: {self.selection_method}")
+        print(f"Using crossover method: {self.crossover_method}")
+        print(f"Using mutation method: {self.mutation_method}")
+        print("\nStarting optimization...")
+        
+        try:
+            for generation in tqdm(range(self.generations), desc="Optimization progress"):
+                # Calculate fitness
+                fitness_values = [(self.calculate_makespan(chrom), chrom) 
+                                for chrom in population]
+                fitness_values.sort()
+                
+                # Update best solution
+                if fitness_values[0][0] < best_makespan:
+                    best_makespan = fitness_values[0][0]
+                    best_solution = fitness_values[0][1].copy()
+                    print(f"\nGeneration {generation+1} found new best solution:")
+                    print(f"Makespan: {best_makespan}")
+                
+                self.best_fitness_history.append(best_makespan)
+                
+                # Check system stability
+                is_stable, reason = self.is_system_stable()
+                if is_stable:
+                    print(f"\nSystem stabilized, reason: {reason}")
+                    print(f"Current generation: {generation + 1}")
+                    break
+                
+                # Generate new population
+                new_population = [fitness_values[0][1].copy()]  # Elitism
+                
+                while len(new_population) < self.population_size:
+                    # Select parents and create child
+                    parent1 = self.select_parent(fitness_values)
+                    parent2 = self.select_parent(fitness_values)
+                    child = self.crossover(parent1, parent2)
+                    child = self.mutation(child)
+                    
+                    # Validate child
+                    if len(child) == len(parent1) and set(child) == set(parent1):
+                        new_population.append(child)
+                    else:
+                        new_population.append(parent1.copy())
+                
+                population = new_population
+                
+                # Save progress every 10 generations
+                if (generation + 1) % 10 == 0:
+                    with open('ga_progress.txt', 'a') as f:
+                        f.write(f"Generation {generation + 1} Best makespan: {best_makespan}\n")
+                        f.write(f"Improvement rate: {self.calculate_improvement_rate():.4f}\n")
+            
+            return best_solution, best_makespan
+            
+        except Exception as e:
+            print(f"\nOptimization error: {str(e)}")
+            if best_solution is None:
+                return population[0], float('inf')
+            return best_solution, best_makespan
+
 def read_job_shop_data(filename: str) -> List[List[Tuple[int, int]]]:
     """Read job shop scheduling problem data"""
     with open(filename, 'r') as f:
@@ -287,6 +445,32 @@ def test_with_small_data():
     child = ga.uniform_crossover(parent1, parent2)
     print(f"Child (uniform): {child}")
     print(f"Child job counts: {[child.count(i) for i in range(ga.num_jobs)]}")
+    
+    print("\n5. Testing mutation methods:")
+    print("\nTesting swap mutation:")
+    ga.mutation_method = "swap"
+    mutated = ga.swap_mutation(chromosome)
+    print(f"Original: {chromosome}")
+    print(f"Mutated (swap): {mutated}")
+    
+    print("\nTesting insert mutation:")
+    ga.mutation_method = "insert"
+    mutated = ga.insert_mutation(chromosome)
+    print(f"Original: {chromosome}")
+    print(f"Mutated (insert): {mutated}")
+    
+    print("\nTesting reverse mutation:")
+    ga.mutation_method = "reverse"
+    mutated = ga.reverse_mutation(chromosome)
+    print(f"Original: {chromosome}")
+    print(f"Mutated (reverse): {mutated}")
+    
+    print("\n6. Testing full optimization run:")
+    ga.generations = 20  # Set to a small number for testing
+    best_solution, best_makespan = ga.run()
+    print(f"\nOptimization complete:")
+    print(f"Best makespan: {best_makespan}")
+    print(f"Best solution: {best_solution}")
 
 if __name__ == "__main__":
     # Set random seed for reproducibility
@@ -294,4 +478,5 @@ if __name__ == "__main__":
     
     # Run tests with data_small.txt
     test_with_small_data()
+
 

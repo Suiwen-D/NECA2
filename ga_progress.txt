@@ -1,0 +1,4 @@
+Generation 10 Best makespan: 511
+Improvement rate: 0.0000
+Generation 20 Best makespan: 505
+Improvement rate: 0.6667
