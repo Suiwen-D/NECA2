@@ -1,0 +1,309 @@
+Job Shop Scheduling Problem Test Results
+========================================
+
+
+Dataset: data_small.txt - Parameter Combination 1
+Problem Size: 5 Jobs x 5 Machines
+Parameter Settings:
+- mutation_rate: 0.2
+- crossover_rate: 0.8
+- selection_method: tournament
+- crossover_method: single
+- mutation_method: swap
+- population_size: 30
+- generations: 50
+Run Results:
+- Best Makespan: 452
+- Run Time: 0.03 seconds
+----------------------------------------
+
+Dataset: data_small.txt - Parameter Combination 2
+Problem Size: 5 Jobs x 5 Machines
+Parameter Settings:
+- mutation_rate: 0.4
+- crossover_rate: 0.8
+- selection_method: tournament
+- crossover_method: single
+- mutation_method: insert
+- population_size: 30
+- generations: 50
+Run Results:
+- Best Makespan: 449
+- Run Time: 0.01 seconds
+----------------------------------------
+
+Dataset: data_small.txt - Parameter Combination 3
+Problem Size: 5 Jobs x 5 Machines
+Parameter Settings:
+- mutation_rate: 0.2
+- crossover_rate: 0.9
+- selection_method: tournament
+- crossover_method: uniform
+- mutation_method: reverse
+- population_size: 30
+- generations: 50
+Run Results:
+- Best Makespan: 459
+- Run Time: 0.02 seconds
+----------------------------------------
+
+Dataset: data_small.txt - Parameter Combination 4
+Problem Size: 5 Jobs x 5 Machines
+Parameter Settings:
+- mutation_rate: 0.2
+- crossover_rate: 0.8
+- selection_method: random
+- crossover_method: single
+- mutation_method: swap
+- population_size: 30
+- generations: 50
+Run Results:
+- Best Makespan: 459
+- Run Time: 0.02 seconds
+----------------------------------------
+
+Dataset: data_small.txt - Parameter Combination 5
+Problem Size: 5 Jobs x 5 Machines
+Parameter Settings:
+- mutation_rate: 0.3
+- crossover_rate: 0.85
+- selection_method: tournament
+- crossover_method: uniform
+- mutation_method: insert
+- population_size: 30
+- generations: 50
+Run Results:
+- Best Makespan: 449
+- Run Time: 0.04 seconds
+----------------------------------------
+
+Dataset: data_small.txt - Parameter Combination 6
+Problem Size: 5 Jobs x 5 Machines
+Parameter Settings:
+- mutation_rate: 0.25
+- crossover_rate: 0.8
+- selection_method: random
+- crossover_method: uniform
+- mutation_method: reverse
+- population_size: 30
+- generations: 50
+Run Results:
+- Best Makespan: 444
+- Run Time: 0.02 seconds
+----------------------------------------
+
+data_small.txt Best Overall Results:
+Best Makespan: 444
+Best Parameter Combination:
+- mutation_rate: 0.25
+- crossover_rate: 0.8
+- selection_method: random
+- crossover_method: uniform
+- mutation_method: reverse
+- population_size: 30
+- generations: 50
+========================================
+
+Dataset: data.txt - Parameter Combination 1
+Problem Size: 10 Jobs x 10 Machines
+Parameter Settings:
+- mutation_rate: 0.2
+- crossover_rate: 0.8
+- selection_method: tournament
+- crossover_method: single
+- mutation_method: swap
+- population_size: 50
+- generations: 100
+Run Results:
+- Best Makespan: 1448
+- Run Time: 0.09 seconds
+----------------------------------------
+
+Dataset: data.txt - Parameter Combination 2
+Problem Size: 10 Jobs x 10 Machines
+Parameter Settings:
+- mutation_rate: 0.4
+- crossover_rate: 0.8
+- selection_method: tournament
+- crossover_method: single
+- mutation_method: insert
+- population_size: 50
+- generations: 100
+Run Results:
+- Best Makespan: 1349
+- Run Time: 0.11 seconds
+----------------------------------------
+
+Dataset: data.txt - Parameter Combination 3
+Problem Size: 10 Jobs x 10 Machines
+Parameter Settings:
+- mutation_rate: 0.2
+- crossover_rate: 0.9
+- selection_method: tournament
+- crossover_method: uniform
+- mutation_method: reverse
+- population_size: 50
+- generations: 100
+Run Results:
+- Best Makespan: 1631
+- Run Time: 0.07 seconds
+----------------------------------------
+
+Dataset: data.txt - Parameter Combination 4
+Problem Size: 10 Jobs x 10 Machines
+Parameter Settings:
+- mutation_rate: 0.2
+- crossover_rate: 0.8
+- selection_method: random
+- crossover_method: single
+- mutation_method: swap
+- population_size: 50
+- generations: 100
+Run Results:
+- Best Makespan: 1402
+- Run Time: 0.12 seconds
+----------------------------------------
+
+Dataset: data.txt - Parameter Combination 5
+Problem Size: 10 Jobs x 10 Machines
+Parameter Settings:
+- mutation_rate: 0.3
+- crossover_rate: 0.85
+- selection_method: tournament
+- crossover_method: uniform
+- mutation_method: insert
+- population_size: 50
+- generations: 100
+Run Results:
+- Best Makespan: 1578
+- Run Time: 0.07 seconds
+----------------------------------------
+
+Dataset: data.txt - Parameter Combination 6
+Problem Size: 10 Jobs x 10 Machines
+Parameter Settings:
+- mutation_rate: 0.25
+- crossover_rate: 0.8
+- selection_method: random
+- crossover_method: uniform
+- mutation_method: reverse
+- population_size: 50
+- generations: 100
+Run Results:
+- Best Makespan: 1475
+- Run Time: 0.06 seconds
+----------------------------------------
+
+data.txt Best Overall Results:
+Best Makespan: 1349
+Best Parameter Combination:
+- mutation_rate: 0.4
+- crossover_rate: 0.8
+- selection_method: tournament
+- crossover_method: single
+- mutation_method: insert
+- population_size: 50
+- generations: 100
+========================================
+
+Dataset: data_large.txt - Parameter Combination 1
+Problem Size: 20 Jobs x 15 Machines
+Parameter Settings:
+- mutation_rate: 0.2
+- crossover_rate: 0.8
+- selection_method: tournament
+- crossover_method: single
+- mutation_method: swap
+- population_size: 100
+- generations: 150
+Run Results:
+- Best Makespan: 897
+- Run Time: 0.92 seconds
+----------------------------------------
+
+Dataset: data_large.txt - Parameter Combination 2
+Problem Size: 20 Jobs x 15 Machines
+Parameter Settings:
+- mutation_rate: 0.4
+- crossover_rate: 0.8
+- selection_method: tournament
+- crossover_method: single
+- mutation_method: insert
+- population_size: 100
+- generations: 150
+Run Results:
+- Best Makespan: 881
+- Run Time: 0.55 seconds
+----------------------------------------
+
+Dataset: data_large.txt - Parameter Combination 3
+Problem Size: 20 Jobs x 15 Machines
+Parameter Settings:
+- mutation_rate: 0.2
+- crossover_rate: 0.9
+- selection_method: tournament
+- crossover_method: uniform
+- mutation_method: reverse
+- population_size: 100
+- generations: 150
+Run Results:
+- Best Makespan: 1019
+- Run Time: 0.26 seconds
+----------------------------------------
+
+Dataset: data_large.txt - Parameter Combination 4
+Problem Size: 20 Jobs x 15 Machines
+Parameter Settings:
+- mutation_rate: 0.2
+- crossover_rate: 0.8
+- selection_method: random
+- crossover_method: single
+- mutation_method: swap
+- population_size: 100
+- generations: 150
+Run Results:
+- Best Makespan: 868
+- Run Time: 0.96 seconds
+----------------------------------------
+
+Dataset: data_large.txt - Parameter Combination 5
+Problem Size: 20 Jobs x 15 Machines
+Parameter Settings:
+- mutation_rate: 0.3
+- crossover_rate: 0.85
+- selection_method: tournament
+- crossover_method: uniform
+- mutation_method: insert
+- population_size: 100
+- generations: 150
+Run Results:
+- Best Makespan: 1056
+- Run Time: 0.37 seconds
+----------------------------------------
+
+Dataset: data_large.txt - Parameter Combination 6
+Problem Size: 20 Jobs x 15 Machines
+Parameter Settings:
+- mutation_rate: 0.25
+- crossover_rate: 0.8
+- selection_method: random
+- crossover_method: uniform
+- mutation_method: reverse
+- population_size: 100
+- generations: 150
+Run Results:
+- Best Makespan: 902
+- Run Time: 0.83 seconds
+----------------------------------------
+
+data_large.txt Best Overall Results:
+Best Makespan: 868
+Best Parameter Combination:
+- mutation_rate: 0.2
+- crossover_rate: 0.8
+- selection_method: random
+- crossover_method: single
+- mutation_method: swap
+- population_size: 100
+- generations: 150
+========================================

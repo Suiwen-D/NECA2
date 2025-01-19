@@ -2,3 +2,209 @@ Generation 10 Best makespan: 511
 Improvement rate: 0.0000
 Generation 20 Best makespan: 505
 Improvement rate: 0.6667
+Generation 10 Best Makespan: 470
+Improvement Rate: 2.8889
+Generation 10 Best Makespan: 444
+Improvement Rate: 8.3333
+Generation 10 Best Makespan: 449
+Improvement Rate: 0.5556
+Generation 10 Best Makespan: 444
+Improvement Rate: 2.3333
+Generation 10 Best Makespan: 470
+Improvement Rate: 4.6667
+Generation 20 Best Makespan: 459
+Improvement Rate: 1.2222
+Generation 30 Best Makespan: 452
+Improvement Rate: 0.7778
+Generation 10 Best Makespan: 465
+Improvement Rate: 1.0000
+Generation 10 Best Makespan: 1471
+Improvement Rate: 28.3333
+Generation 20 Best Makespan: 1394
+Improvement Rate: 8.5556
+Generation 30 Best Makespan: 1391
+Improvement Rate: 0.3333
+Generation 10 Best Makespan: 1512
+Improvement Rate: 17.4444
+Generation 20 Best Makespan: 1448
+Improvement Rate: 2.1111
+Generation 10 Best Makespan: 1660
+Improvement Rate: 23.8889
+Generation 20 Best Makespan: 1504
+Improvement Rate: 16.0000
+Generation 10 Best Makespan: 1538
+Improvement Rate: 24.2222
+Generation 20 Best Makespan: 1500
+Improvement Rate: 1.1111
+Generation 30 Best Makespan: 1444
+Improvement Rate: 6.2222
+Generation 40 Best Makespan: 1431
+Improvement Rate: 1.4444
+Generation 10 Best Makespan: 1638
+Improvement Rate: 10.4444
+Generation 10 Best Makespan: 1528
+Improvement Rate: 23.2222
+Generation 20 Best Makespan: 1468
+Improvement Rate: 6.6667
+Generation 30 Best Makespan: 1453
+Improvement Rate: 1.6667
+Generation 10 Best Makespan: 1026
+Improvement Rate: 11.6667
+Generation 20 Best Makespan: 994
+Improvement Rate: 2.8889
+Generation 30 Best Makespan: 951
+Improvement Rate: 4.1111
+Generation 40 Best Makespan: 934
+Improvement Rate: 1.3333
+Generation 50 Best Makespan: 930
+Improvement Rate: 0.4444
+Generation 10 Best Makespan: 1017
+Improvement Rate: 7.2222
+Generation 20 Best Makespan: 968
+Improvement Rate: 4.6667
+Generation 30 Best Makespan: 936
+Improvement Rate: 2.0000
+Generation 40 Best Makespan: 906
+Improvement Rate: 3.0000
+Generation 50 Best Makespan: 877
+Improvement Rate: 2.0000
+Generation 60 Best Makespan: 869
+Improvement Rate: 0.8889
+Generation 70 Best Makespan: 852
+Improvement Rate: 1.6667
+Generation 10 Best Makespan: 1073
+Improvement Rate: 0.0000
+Generation 10 Best Makespan: 978
+Improvement Rate: 17.1111
+Generation 20 Best Makespan: 910
+Improvement Rate: 5.2222
+Generation 30 Best Makespan: 881
+Improvement Rate: 2.6667
+Generation 40 Best Makespan: 873
+Improvement Rate: 0.8889
+Generation 10 Best Makespan: 1084
+Improvement Rate: 6.5556
+Generation 10 Best Makespan: 1056
+Improvement Rate: 5.0000
+Generation 20 Best Makespan: 984
+Improvement Rate: 5.8889
+Generation 30 Best Makespan: 951
+Improvement Rate: 3.6667
+Generation 40 Best Makespan: 935
+Improvement Rate: 1.7778
+Generation 50 Best Makespan: 919
+Improvement Rate: 1.7778
+Generation 60 Best Makespan: 898
+Improvement Rate: 2.0000
+Generation 10 Best Makespan: 465
+Improvement Rate: 1.0000
+Generation 20 Best Makespan: 452
+Improvement Rate: 1.4444
+Generation 10 Best Makespan: 449
+Improvement Rate: 2.3333
+Generation 10 Best Makespan: 465
+Improvement Rate: 6.3333
+Generation 20 Best Makespan: 459
+Improvement Rate: 0.6667
+Generation 10 Best Makespan: 459
+Improvement Rate: 1.2222
+Generation 10 Best Makespan: 464
+Improvement Rate: 6.0000
+Generation 20 Best Makespan: 454
+Improvement Rate: 1.1111
+Generation 30 Best Makespan: 449
+Improvement Rate: 0.5556
+Generation 10 Best Makespan: 444
+Improvement Rate: 0.5556
+Generation 10 Best Makespan: 1490
+Improvement Rate: 28.5556
+Generation 20 Best Makespan: 1455
+Improvement Rate: 1.6667
+Generation 30 Best Makespan: 1448
+Improvement Rate: 0.7778
+Generation 10 Best Makespan: 1464
+Improvement Rate: 32.6667
+Generation 20 Best Makespan: 1390
+Improvement Rate: 8.2222
+Generation 30 Best Makespan: 1360
+Improvement Rate: 3.3333
+Generation 40 Best Makespan: 1349
+Improvement Rate: 1.2222
+Generation 10 Best Makespan: 1697
+Improvement Rate: 12.7778
+Generation 20 Best Makespan: 1631
+Improvement Rate: 7.3333
+Generation 10 Best Makespan: 1607
+Improvement Rate: 4.6667
+Generation 20 Best Makespan: 1470
+Improvement Rate: 15.2222
+Generation 30 Best Makespan: 1454
+Improvement Rate: 1.7778
+Generation 40 Best Makespan: 1402
+Improvement Rate: 5.7778
+Generation 10 Best Makespan: 1597
+Improvement Rate: 19.2222
+Generation 20 Best Makespan: 1578
+Improvement Rate: 2.1111
+Generation 10 Best Makespan: 1493
+Improvement Rate: 28.4444
+Generation 20 Best Makespan: 1475
+Improvement Rate: 2.0000
+Generation 10 Best Makespan: 1020
+Improvement Rate: 5.6667
+Generation 20 Best Makespan: 1007
+Improvement Rate: 1.4444
+Generation 30 Best Makespan: 984
+Improvement Rate: 2.5556
+Generation 40 Best Makespan: 964
+Improvement Rate: 2.2222
+Generation 50 Best Makespan: 949
+Improvement Rate: 1.5556
+Generation 60 Best Makespan: 929
+Improvement Rate: 2.2222
+Generation 70 Best Makespan: 901
+Improvement Rate: 3.1111
+Generation 80 Best Makespan: 897
+Improvement Rate: 0.4444
+Generation 10 Best Makespan: 994
+Improvement Rate: 12.2222
+Generation 20 Best Makespan: 959
+Improvement Rate: 3.8889
+Generation 30 Best Makespan: 914
+Improvement Rate: 5.0000
+Generation 40 Best Makespan: 881
+Improvement Rate: 2.5556
+Generation 10 Best Makespan: 1019
+Improvement Rate: 9.6667
+Generation 10 Best Makespan: 1035
+Improvement Rate: 11.7778
+Generation 20 Best Makespan: 999
+Improvement Rate: 3.8889
+Generation 30 Best Makespan: 946
+Improvement Rate: 4.2222
+Generation 40 Best Makespan: 917
+Improvement Rate: 2.6667
+Generation 50 Best Makespan: 887
+Improvement Rate: 3.3333
+Generation 60 Best Makespan: 875
+Improvement Rate: 1.3333
+Generation 70 Best Makespan: 871
+Improvement Rate: 0.4444
+Generation 80 Best Makespan: 868
+Improvement Rate: 0.3333
+Generation 10 Best Makespan: 1101
+Improvement Rate: 0.0000
+Generation 20 Best Makespan: 1056
+Improvement Rate: 5.0000
+Generation 10 Best Makespan: 1083
+Improvement Rate: 5.8889
+Generation 20 Best Makespan: 1034
+Improvement Rate: 5.4444
+Generation 30 Best Makespan: 987
+Improvement Rate: 5.2222
+Generation 40 Best Makespan: 941
+Improvement Rate: 5.1111
+Generation 50 Best Makespan: 928
+Improvement Rate: 1.4444
+Generation 60 Best Makespan: 902
+Improvement Rate: 2.8889
